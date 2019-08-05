@@ -139,7 +139,7 @@ One of the problems I faced was trying to write a code to make sure the Aliens c
 Future Content
 Along with adding the shooting functionality, there are a number of potential future features I'd like to implement, such as:
 
-1 Difficulty level mode: Putting in different difficulty levels for players. 2 Additional Aliens with faster sequences and time intervals. 3 More weapons and increase in shooting intervals to make it a bit difficult for the player to manoevure. 4 Ability to choose different space invaders background images for different levels, as to make it abit realistic as the game goes on. 5 Ability to increase the grid size. 6 Ability to add different types of Alien images as the player goes into different difficulty levels. 7 Ability for the player to earn rewards based on the number of Aliens killed in different difficulty levels. 8 Ability to allow players share their score and experiences online. 9 And much more!
+1 Difficulty level mode: Putting in different difficulty levels for players. 2 Additional Aliens with faster sequences and time intervals. 3 More weapons and increase in shooting intervals to make it a bit difficult for the player to manoeuvre. 4 Ability to choose different space invaders background images for different levels, as to make it a-bit realistic as the game goes on. 5 Ability to increase the grid size. 6 Ability to add different types of Alien images as the player goes into different difficulty levels. 7 Ability for the player to earn rewards based on the number of Aliens killed in different difficulty levels. 8 Ability to allow players share their score and experiences online. 9 And much more!
 
 Linter
 Severity 	Provider 	Description	Line

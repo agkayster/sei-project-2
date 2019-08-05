@@ -112,6 +112,7 @@ class NewsIndex extends React.Component {
                       <option value="ru">Russia</option>
                       <option value="pl">Poland</option>
                       <option value="co">Columbia</option>
+                      <option value="fr">France</option>
                     </select>
                   </div>
                 </div>

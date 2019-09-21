@@ -58,6 +58,8 @@ How would users be able to search for a particular headline, or filter for the l
 
 ### Search, Sort and Filter code:
 
+The code below was one of my contributions to the project.
+
 ```js
 {
   (
@@ -97,6 +99,8 @@ How would users be able to search for a particular headline, or filter for the l
 
 ### Linking our latest news to Home page code:
 
+The code below was one of my contributions to the project.
+
 ```js
 <Link to={{
   pathname: '/article',//A link to the pathname article, which carries the news from state
@@ -114,6 +118,9 @@ How would users be able to search for a particular headline, or filter for the l
 
 
 ### Screen Shots
+![image](https://user-images.githubusercontent.com/41432574/65363798-b4eeb200-dc05-11e9-8ef8-70a3db649c4d.png)
+
+![image](https://user-images.githubusercontent.com/41432574/65363884-1f075700-dc06-11e9-9b31-1d384075d198.png)
 
 ### Final Products
 

@@ -147,5 +147,4 @@ One of the challenges we faced was trying to link the latest news across the var
 My biggest win so far was the amount of confidence I gained from working with React and building this App.I got the opportunity to apply my new learnings in a real-world project and achieved more than I thought I could on my own, while helping me to understand fully everything we have been taught so far.
 
 ## Future Content
-Linter
-Severity 	Provider 	Description	Line
+We would like to add fresh news update from other countries to the landing page of our web application.

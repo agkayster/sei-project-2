@@ -52,15 +52,15 @@ We also had to research for proper professional CSS styling for the type of app 
 ### Functionality
 
 ### Search, Sort and Filtering
-How would users be able to search for a particular headline, or filter for the latest news or sort headlines by Alphabetical order? We had to write a search, sort and filter code in our Index.js component which would allow users to carry out the above.
+* How would users be able to search for a particular headline, or filter for the latest news or sort headlines by Alphabetical order? We had to write a search, sort and filter code in our Index.js component which would allow users to carry out the above.
 
-We were also able to write a code that would send in the different country codes to the componentDidMount function, which would be triggered by a handleCountry event listener, which would get the latest news across various news headlines per country.
+* We were also able to write a code that would send in the different country codes to the componentDidMount function, which would be triggered by a handleCountry event listener, which would get the latest news across various news headlines per country.
 
 ### Search, Sort and Filter code:
 
 The code below was one of my contributions to the project.
 
-```js
+```JavaScript
 {
   (
 <div className="field">
@@ -101,7 +101,7 @@ The code below was one of my contributions to the project.
 
 The code below was one of my contributions to the project.
 
-```js
+```JavaScript
 <Link to={{
   pathname: '/article',//A link to the pathname article, which carries the news from state
   state: news
@@ -131,13 +131,13 @@ https://www.linkedin.com/in/ejike-chiboka-pmp
 ## Bugs
 Below is a list of some of the known bugs within the game:
 
-1 Fresh News update for other countries apart from GB - We noticed that the news update for other countries does not update as fast as that for the Great Britain and this cause the app to break from time to time.
+* Fresh News update for other countries apart from GB - We noticed that the news update for other countries does not update as fast as that for the Great Britain and this cause the app to break from time to time.
 
 ## Winners and Blockers:
 
-One of the challenges we faced was trying to link the latest news across the various headlines to our home/landing page section designed for latest news.
+* One of the challenges we faced was trying to link the latest news across the various headlines to our home/landing page section designed for latest news.
 
-My biggest win so far was the amount of confidence I gained from working with React and building this App.I got the opportunity to apply my new learnings in a real-world project and achieved more than I thought I could on my own, while helping me to understand fully everything we have been taught so far.
+* My biggest win so far was the amount of confidence I gained from working with React and building this App.I got the opportunity to apply my new learnings in a real-world project and achieved more than I thought I could on my own, while helping me to understand fully everything we have been taught so far.
 
 ## Future Content
 We would like to add fresh news update from other countries to the landing page of our web application.

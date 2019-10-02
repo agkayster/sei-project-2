@@ -141,3 +141,14 @@ Below is a list of some of the known bugs within the game:
 
 ## Future Content
 We would like to add fresh news update from other countries to the landing page of our web application.
+
+
+## What we learned
+Major learning points:
+* Creation of code branches using Git and GitHub
+* Pair coding using only one laptop
+* Good communication essential for handling the above
+* CSS Styling with Bulma as a first time
+* Learning when and how to use lodash
+* Implementing handleSort, handleSearch, handleCountry, componentDidMount, componentWillUnmount and componentDidUpdate functions in JavaScript.
+* Using the bind method in state.

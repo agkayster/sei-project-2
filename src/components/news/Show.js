@@ -10,7 +10,9 @@ class NewsShow extends React.Component {
   constructor() {
     super()
 
-    this.state ={}
+    this.state ={
+      news: {}
+    }
   }
 
   componentDidMount() {

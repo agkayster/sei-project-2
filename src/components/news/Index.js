@@ -1,17 +1,18 @@
 //index.js acts as the search and filter for all news
 
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Card from './Card'
 import axios from 'axios'
 import _ from 'lodash'
 
 class NewsIndex extends React.Component {
-  constructor(){
+  constructor() {
     super()
     this.state = {
-      searchTerm: '',//this.state has to store the data for the searchTerm and sortTerm coming from     filterWines function
-      sortTerm: 'publishedAt|asc'
+      searchTerm: '', //this.state has to store the data for the searchTerm and sortTerm coming from     filterWines function
+      sortTerm: 'publishedAt|asc',
+      newsapi: {}
     }
 
     this.filterNews = this.filterNews.bind(this)
@@ -30,32 +31,32 @@ class NewsIndex extends React.Component {
     clearInterval(this.interval)
   }
 
-
   handleSearch(e) {
     this.setState({ searchTerm: e.target.value })
   }
 
-  handleSort(e){
-    this.setState({sortTerm: e.target.value})
+  handleSort(e) {
+    this.setState({ sortTerm: e.target.value })
   }
 
   handleCountry(e) {
     this.newsUpdate(e.target.value)
   }
 
-
-  newsUpdate(countryCode){
+  newsUpdate(countryCode) {
     console.log('new news...')
-    axios.get(`https://newsapi.org/v2/top-headlines?country=${countryCode}&apiKey=${process.env.NEWSAPI_KEY}`)
-      .then(res => this.setState({newsapi: res.data.articles}))// function that gets the data from the articles array
-
+    axios
+      .get(
+        `https://newsapi.org/v2/top-headlines?country=${countryCode}&apiKey=${process.env.NEWSAPI_KEY}`
+      )
+      .then((res) => this.setState({ newsapi: res.data.articles })) // function that gets the data from the articles array
   }
 
   filterNews() {
     const re = new RegExp(this.state.searchTerm, 'i')
     const [field, order] = this.state.sortTerm.split('|')
 
-    const filterNews = _.filter(this.state.newsapi, news => {
+    const filterNews = _.filter(this.state.newsapi, (news) => {
       return re.test(news.name) || re.test(news.title)
     })
     const sortedNews = _.orderBy(filterNews, [field], [order])
@@ -63,30 +64,29 @@ class NewsIndex extends React.Component {
     return sortedNews
   }
 
-
   render() {
-    if(!this.state.newsapi) return <h2>Loading...</h2>
+    if (!this.state.newsapi) return <h2>Loading...</h2>
     const latestNews = _.head(this.filterNews())
     console.log(latestNews)
 
     return (
-
       <div>
-
         <section className="hero is-primary is-medium">
           <div id="header" className="hero-body">
-            <div className="container has-text-centered">
-            </div>
+            <div className="container has-text-centered"></div>
           </div>
         </section>
-
 
         <section className="section">
           <div className="container">
             <div className="columns">
               <div className="column">
                 <div className="field">
-                  <input placeholder="search" className="input" onChange={this.handleSearch}/>
+                  <input
+                    placeholder="search"
+                    className="input"
+                    onChange={this.handleSearch}
+                  />
                 </div>
               </div>
               <div className="column">
@@ -120,24 +120,27 @@ class NewsIndex extends React.Component {
             </div>
 
             <div className="columns is-multiline">
-              {this.filterNews().map(news =>
+              {this.filterNews().map((news) => (
                 //above we invoke the function filterNews to map over
-                <div className="column is-half-tablet is-one-quarter-desktop" key={news.url}>
-
-                  <Link to={{
-                    pathname: '/article',//A link to the pathname article, which carries the news from state
-                    state: news
-                  }}>
+                <div
+                  className="column is-half-tablet is-one-quarter-desktop"
+                  key={news.url}
+                >
+                  <Link
+                    to={{
+                      pathname: '/article', //A link to the pathname article, which carries the news from state
+                      state: news
+                    }}
+                  >
                     <Card
                       name={news.source.name}
                       title={news.title}
                       description={news.description}
                       image={news.urlToImage}
-
                     />
                   </Link>
                 </div>
-              )}
+              ))}
             </div>
           </div>
         </section>

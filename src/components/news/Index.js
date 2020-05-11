@@ -11,8 +11,9 @@ class NewsIndex extends React.Component {
     super()
     this.state = {
       searchTerm: '', //this.state has to store the data for the searchTerm and sortTerm coming from     filterWines function
-      sortTerm: 'publishedAt|asc',
-      newsapi: {}
+      sortTerm: '',
+      newsapi: {},
+      countryCode: 'gb'
     }
 
     this.filterNews = this.filterNews.bind(this)
@@ -23,8 +24,11 @@ class NewsIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.newsUpdate('gb')
-    this.interval = setInterval(() => this.newsUpdate(), 60000)
+    this.newsUpdate(this.state.countryCode)
+    this.interval = setInterval(
+      () => this.newsUpdate(this.state.codeCountry),
+      60000
+    )
   }
 
   componentWillUnmount() {
@@ -40,6 +44,7 @@ class NewsIndex extends React.Component {
   }
 
   handleCountry(e) {
+    this.setState({ countryCode: e.target.value })
     this.newsUpdate(e.target.value)
   }
 
@@ -49,7 +54,9 @@ class NewsIndex extends React.Component {
       .get(
         `https://newsapi.org/v2/top-headlines?country=${countryCode}&apiKey=${process.env.NEWSAPI_KEY}`
       )
-      .then((res) => this.setState({ newsapi: res.data.articles })) // function that gets the data from the articles array
+      .then((res) =>
+        this.setState({ newsapi: res.data.articles, countryCode })
+      ) // function that gets the data from the articles array
   }
 
   filterNews() {
@@ -104,7 +111,10 @@ class NewsIndex extends React.Component {
               <div className="column">
                 <div className="field">
                   <div className="select is-fullwidth">
-                    <select onChange={this.handleCountry}>
+                    <select
+                      onChange={this.handleCountry}
+                      value={this.state.countryCode}
+                    >
                       <option value="gb">United Kingdom</option>
                       <option value="us">United States of America</option>
                       <option value="ng">Nigeria</option>

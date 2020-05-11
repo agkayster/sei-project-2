@@ -8,16 +8,11 @@ class Navbar extends React.Component {
 
   constructor(){
     super()
-    this.logout=this.logout.bind(this)
     this.toggleNavbar=this.toggleNavbar.bind(this)
 
     this.state={
       navbarOpen: false // set this to false
     }
-  }
-
-  logout(){
-    this.props.history.push('/') //takes us to the home page once we are logged out and token is removed
   }
 
   toggleNavbar(){

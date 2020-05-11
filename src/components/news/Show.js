@@ -2,26 +2,23 @@
 
 import React from 'react'
 
-
-
-
-
 class NewsShow extends React.Component {
   constructor() {
     super()
 
-    this.state ={
-      news: {}
+    this.state = {
+      news: null
     }
   }
 
   componentDidMount() {
-    if(!this.props.location.state) return this.props.history.replace('/')
+    if (!this.props.location.state) return this.props.history.replace('/')
     this.setState({ news: this.props.location.state })
   }
 
   render() {
-    if(!this.state.news) return <h1>Loading...</h1>
+    console.log(this.state.news)
+    if (!this.state.news) return <h1>Loading...</h1>
     return (
       <section className="section">
         <div className="container">
@@ -34,13 +31,24 @@ class NewsShow extends React.Component {
           <div className="columns">
             <div className="column">
               <figure className="image">
-                <img src={this.state.news.urlToImage} alt={this.state.news.source.name} />
+                <img
+                  src={this.state.news.urlToImage}
+                  alt={this.state.news.source.name}
+                />
               </figure>
             </div>
             <div className="column">
               <p>{this.state.news.content}</p>
-              <p className="satellite"> 📡
-                <a href={this.state.news.url} target ="_blank" rel="noopener noreferrer">{this.state.news.url}</a>
+              <p className="satellite">
+                {' '}
+                📡
+                <a
+                  href={this.state.news.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {this.state.news.url}
+                </a>
               </p>
             </div>
           </div>
@@ -48,7 +56,6 @@ class NewsShow extends React.Component {
       </section>
     )
   }
-
 }
 
 export default NewsShow

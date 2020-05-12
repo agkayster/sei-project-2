@@ -134,7 +134,7 @@ class NewsIndex extends React.Component {
                 //above we invoke the function filterNews to map over
                 <div
                   className="column is-half-tablet is-one-quarter-desktop"
-                  key={news.url}
+                  key={news.title}
                 >
                   <Link
                     to={{

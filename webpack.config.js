@@ -30,6 +30,8 @@ module.exports = {
       filename: 'index.html',
       inject: 'body'
     }),
-    new Dotenv()
+    new Dotenv({
+      path: './.env'
+    })
   ]
 }

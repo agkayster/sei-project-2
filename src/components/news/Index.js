@@ -26,9 +26,9 @@ class NewsIndex extends React.Component {
   componentDidMount() {
     this.newsUpdate(this.state.countryCode)
     this.interval = setInterval(
-      () => this.newsUpdate(this.state.codeCountry),
+      () => this.newsUpdate(this.state.countryCode),
       60000
-    )
+    );
   }
 
   componentWillUnmount() {

@@ -78,70 +78,79 @@ class NewsIndex extends React.Component {
 
     return (
       <div>
-        <section className="hero is-primary is-medium">
-          <div id="header" className="hero-body">
-            <div className="container has-text-centered"></div>
+        <section className='hero is-primary is-medium'>
+          <div id='header' className='hero-body'>
+            <div className='container has-text-centered'></div>
           </div>
         </section>
 
-        <section className="section">
-          <div className="container">
-            <div className="columns">
-              <div className="column">
-                <div className="field">
+        <section className='section'>
+          <div className='container'>
+            <div className='columns'>
+              <div className='column'>
+                <div className='field'>
                   <input
-                    placeholder="search"
-                    className="input"
+                    placeholder='search'
+                    className='input'
                     onChange={this.handleSearch}
                   />
                 </div>
               </div>
-              <div className="column">
-                <div className="field">
-                  <div className="select is-fullwidth">
+              <div className='column'>
+                <div className='field'>
+                  <div className='select is-fullwidth'>
                     <select onChange={this.handleSort}>
-                      <option value="source.name|asc">Name A-Z</option>
-                      <option value="source.name|desc">Name Z-A</option>
-                      <option value="publishedAt|asc">News Latest</option>
-                      <option value="publishedAt|desc">News Oldest</option>
+                      <option value='source.name|asc'>
+												Name A-Z
+                      </option>
+                      <option value='source.name|desc'>
+												Name Z-A
+                      </option>
+                      <option value='publishedAt|asc'>
+												News Latest
+                      </option>
+                      <option value='publishedAt|desc'>
+												News Oldest
+                      </option>
                     </select>
                   </div>
                 </div>
               </div>
-              <div className="column">
-                <div className="field">
-                  <div className="select is-fullwidth">
+              <div className='column'>
+                <div className='field'>
+                  <div className='select is-fullwidth'>
                     <select
                       onChange={this.handleCountry}
-                      value={this.state.countryCode}
-                    >
-                      <option value="gb">United Kingdom</option>
-                      <option value="us">United States of America</option>
-                      <option value="ng">Nigeria</option>
-                      <option value="it">Italy</option>
-                      <option value="ru">Russia</option>
-                      <option value="pl">Poland</option>
-                      <option value="co">Columbia</option>
-                      <option value="fr">France</option>
+                      value={this.state.countryCode}>
+                      <option value='gb'>
+												United Kingdom
+                      </option>
+                      <option value='us'>
+												United States of America
+                      </option>
+                      <option value='ng'>Nigeria</option>
+                      <option value='it'>Italy</option>
+                      <option value='ru'>Russia</option>
+                      <option value='pl'>Poland</option>
+                      <option value='co'>Columbia</option>
+                      <option value='fr'>France</option>
                     </select>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="columns is-multiline">
+            <div className='columns is-multiline'>
               {this.filterNews().map((news) => (
                 //above we invoke the function filterNews to map over
                 <div
-                  className="column is-half-tablet is-one-quarter-desktop"
-                  key={news.title}
-                >
+                  className='column is-half-tablet is-one-quarter-desktop'
+                  key={news.title}>
                   <Link
                     to={{
                       pathname: '/article', //A link to the pathname article, which carries the news from state
                       state: news
-                    }}
-                  >
+                    }}>
                     <Card
                       name={news.source.name}
                       title={news.title}

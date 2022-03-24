@@ -45,7 +45,7 @@
     "react-router-dom": "^5.1.2",
     "react-toastify": "^5.3.2",
     "sass-loader": "^7.3.1",
-    "serialize-javascript": "^5.0.1",
+    "serialize-javascript": "^3.1.0",
     "sockjs": "^0.3.24",
     "ssri": "^8.0.1",
     "style-loader": "^0.23.1",

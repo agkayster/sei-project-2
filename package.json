@@ -47,7 +47,7 @@
     "sass-loader": "^7.3.1",
     "serialize-javascript": "^5.0.1",
     "sockjs": "^0.3.24",
-    "ssri": "^8.0.1",
+    "ssri": "^6.0.2",
     "style-loader": "^0.23.1",
     "tar": "^6.1.11",
     "url-parse": "^1.5.4",

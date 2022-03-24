@@ -20,7 +20,7 @@
     "ansi-regex": "^6.0.1",
     "axios": "^0.26.1",
     "babel-loader": "^8.1.0",
-    "browserslist": "^4.20.2",
+    "browserslist": "^4.16.5",
     "bulma": "^0.7.5",
     "css-loader": "^3.5.3",
     "dns-packet": "^5.3.1",

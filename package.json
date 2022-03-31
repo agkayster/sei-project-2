@@ -15,7 +15,7 @@
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
-    "ajv": "^8.11.0",
+    "ajv": "^6.12.3",
     "ansi-html": "^0.0.9",
     "ansi-regex": "^6.0.1",
     "axios": "^0.26.1",
